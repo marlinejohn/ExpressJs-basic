@@ -17,3 +17,11 @@ app.get('/about', (req, res) => {
 
 // Serve static files
 app.use(express.static('public'));
+
+// greet.. query parameter
+app.get('/greet', (req, res) =>{
+    const name = req.query.name;
+    res.send(`Hello ${name} !`);
+
+})
+
