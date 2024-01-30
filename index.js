@@ -6,6 +6,7 @@ app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 })
 
+
 app.get('/', (req, res) => {
     res.send('Welcome to my Express.js server!')
 })
@@ -13,3 +14,6 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.send('Welcome to my page, an accountant turned web developer')
 })
+
+// Serve static files
+app.use(express.static('public'));
